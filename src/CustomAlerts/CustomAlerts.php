@@ -399,7 +399,7 @@ class CustomAlerts extends PluginBase{
 	 *
 	 * @return boolean
 	 */
-	public function isDefaultFirstJoinMessageEnabled(): boolean{
+	public function isDefaultFirstJoinMessageEnabled(){
 		$cfg = $this->getConfig()->getAll();
 		return $cfg["FirstJoin"]["enable"];
 	}

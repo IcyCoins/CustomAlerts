@@ -29,7 +29,7 @@ class CustomAlerts extends PluginBase{
 	const PRODUCER = "EvolSoft";
 
 	/** @var string VERSION Plugin version */
-	const VERSION = "1.6";
+	const VERSION = "1.7.2-3";
 
 	/** @var string MAIN_WEBSITE Plugin producer website */
 	const MAIN_WEBSITE = "http://www.evolsoft.tk";
@@ -136,7 +136,7 @@ class CustomAlerts extends PluginBase{
 	//API Functions
 
 	/** @var string API_VERSION CustomAlerts API version */
-	const API_VERSION = "1.2";
+	const API_VERSION = "3.0.0-ALPHA10";
 
 	/**
 	 * Get CustomAlerts version
@@ -400,7 +400,7 @@ class CustomAlerts extends PluginBase{
 	 *
 	 * @return boolean
 	 */
-	public function isDefaultFirstJoinMessageEnabled(){
+	public function isDefaultFirstJoinMessageEnabled(): boolean{
 		$cfg = $this->getConfig()->getAll();
 		return $cfg["FirstJoin"]["enable"];
 	}
@@ -412,7 +412,7 @@ class CustomAlerts extends PluginBase{
 	 *
 	 * @return string The default first join message
 	 */
-	public function getDefaultFirstJoinMessage(Player $player){
+	public function getDefaultFirstJoinMessage(Player $player): string{
 		$cfg = $this->getConfig()->getAll();
 		$message = $cfg["FirstJoin"]["message"];
 		$message = str_replace("{PLAYER}", $player->getName(), $message);
